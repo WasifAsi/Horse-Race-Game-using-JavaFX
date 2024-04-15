@@ -16,21 +16,9 @@ public class AHD implements Initializable {
     @FXML
     private ChoiceBox<String> Group;
     @FXML
-    private TextField ID;
-    @FXML
-    private TextField Jockey;
-    @FXML
-    private TextField Name;
-    @FXML
-    private TextField age;
-    @FXML
-    private TextField breed;
-    @FXML
-    private TextField races;
-    @FXML
-    private TextField wins;
+    private TextField ID, Jockey, Name, age, breed ,races, wins;
 
-    private String [] groups={"A","B","C","D"};
+    private final String [] groups={"A","B","C","D"};
     int Age ;
     int Wins;
     int TotelRace ;
