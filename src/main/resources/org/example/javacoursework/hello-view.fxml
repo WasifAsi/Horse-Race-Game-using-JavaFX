@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.javacoursework.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javacoursework.HelloController">
+  <top>
+    <Pane prefHeight="58.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <children>
+        <Label layoutX="32.0" layoutY="21.0" text="Label" />
+        <Label layoutX="533.0" layoutY="21.0" text="Label" />
+      </children>
+    </Pane>
+  </top>
+  <left>
+    <Pane prefHeight="342.0" prefWidth="152.0" style="-fx-background-color: #ff0000;" BorderPane.alignment="CENTER">
+      <children>
+        <VBox layoutY="36.0" prefHeight="167.0" prefWidth="151.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#AHD" prefHeight="43.0" prefWidth="153.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="AHD" textAlignment="CENTER" textFill="WHITE">
+              <font>
+                <Font name="Times New Roman Bold" size="15.0" />
+              </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="153.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="UHD" textAlignment="CENTER" textFill="WHITE">
+              <font>
+                <Font name="Times New Roman Bold" size="15.0" />
+              </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="DHD" textAlignment="CENTER" textFill="WHITE">
+              <font>
+                <Font name="Times New Roman Bold" size="15.0" />
+              </font>
+            </Button>
+          </children>
+        </VBox>
+        <Button fx:id="button" layoutX="-1.0" mnemonicParsing="false" onAction="#home" prefHeight="42.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="Home" textAlignment="CENTER" textFill="WHITE">
+          <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+          </font>
+        </Button>
+      </children>
+    </Pane>
+  </left>
+  <center>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <children>
+        <StackPane fx:id="contentArea" prefHeight="524.0" prefWidth="710.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      </children>
+    </AnchorPane>
+  </center>
+</BorderPane>
