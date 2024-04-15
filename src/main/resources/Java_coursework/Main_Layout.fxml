@@ -9,17 +9,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javacoursework.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java_coursework.HelloController">
   <top>
-    <Pane prefHeight="58.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+    <Pane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color:  #0b76ce;" BorderPane.alignment="CENTER">
       <children>
-        <Label layoutX="32.0" layoutY="21.0" text="Label" />
-        <Label layoutX="533.0" layoutY="21.0" text="Label" />
+        <Label layoutX="20.0" layoutY="6.0" text="Horse Race">
+               <font>
+                  <Font name="System Bold Italic" size="31.0" />
+               </font></Label>
       </children>
     </Pane>
   </top>
   <left>
-    <Pane prefHeight="342.0" prefWidth="152.0" style="-fx-background-color: #ff0000;" BorderPane.alignment="CENTER">
+    <Pane prefHeight="342.0" prefWidth="152.0" style="-fx-background-color: #5bb1e0;" BorderPane.alignment="CENTER">
       <children>
         <VBox layoutY="36.0" prefHeight="167.0" prefWidth="151.0">
           <children>

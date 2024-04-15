@@ -4,6 +4,6 @@ module org.example.javacoursework {
     requires java.logging;
 
 
-    opens org.example.javacoursework to javafx.fxml;
-    exports org.example.javacoursework;
+    opens Java_coursework to javafx.fxml;
+    exports Java_coursework;
 }

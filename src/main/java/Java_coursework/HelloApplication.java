@@ -1,4 +1,4 @@
-package org.example.javacoursework;
+package Java_coursework;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,11 +11,11 @@ import javafx.stage.StageStyle;
 
 public class HelloApplication extends Application {
 
-    double x,y;
+//    double x,y;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Main_Layout.fxml"));
 
 //        root.setOnMousePressed(event -> {
 //            x = event.getSceneX();

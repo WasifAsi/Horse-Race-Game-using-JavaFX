@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="524.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java_coursework.AHD">
+   <children>
+      <Text layoutX="54.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse ID : " />
+      <TextField fx:id="ID" layoutX="134.0" layoutY="50.0" promptText="Horse ID" />
+      <Text layoutX="54.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Name :" />
+      <TextField fx:id="Name" layoutX="134.0" layoutY="102.0" promptText="Horse Name" />
+      <Text layoutX="54.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Age : " />
+      <TextField fx:id="age" layoutX="134.0" layoutY="236.0" promptText="Horse Age" />
+      <Text layoutX="51.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jockey Name : " />
+      <TextField fx:id="Jockey" layoutX="145.0" layoutY="172.0" promptText="Jockey Name" />
+      <Text layoutX="52.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Breed : " />
+      <TextField fx:id="breed" layoutX="132.0" layoutY="296.0" promptText="Horse Breed" />
+      <Text layoutX="62.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totel Races : " />
+      <TextField fx:id="races" layoutX="142.0" layoutY="356.0" promptText="Totel Races" />
+      <Text layoutX="72.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIns : " />
+      <TextField fx:id="wins" layoutX="152.0" layoutY="409.0" promptText="Win count" />
+      <Text layoutX="420.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group : " />
+      <ChoiceBox fx:id="Group" layoutX="481.0" layoutY="57.0" prefWidth="150.0" />
+      <Button layoutX="349.0" layoutY="455.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+   </children>
+</AnchorPane>
