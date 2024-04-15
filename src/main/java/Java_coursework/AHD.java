@@ -31,7 +31,9 @@ public class AHD implements Initializable {
     private TextField wins;
 
     private String [] groups={"A","B","C","D"};
-      int Age ;
+    int Age ;
+    int Wins;
+    int TotelRace ;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,7 +42,12 @@ public class AHD implements Initializable {
 
     public void submit(ActionEvent event) {
         Age =Integer.parseInt(age.getText());
+        Wins =Integer.parseInt(wins.getText());
+        TotelRace =Integer.parseInt(races.getText());
+
+
         System.out.println(Age);
+        System.out.println(Group);
 
     }
 }
