@@ -1,7 +1,5 @@
 package Java_coursework;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.TableColumn;
 import javafx.scene.image.ImageView;
 
 public class DataView {
