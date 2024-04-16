@@ -16,9 +16,9 @@
         <Label fx:id="mylabel" layoutX="429.0" layoutY="378.0" prefHeight="30.0" prefWidth="254.0" />
         <Button layoutX="439.0" layoutY="228.0" mnemonicParsing="false" onAction="#Delete" text="Delete" />
         <Text layoutX="141.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ender the Horse ID Check" />
-      <VBox prefHeight="55.0" prefWidth="755.0">
+      <VBox prefHeight="55.0" prefWidth="750.0">
          <children>
-            <Pane prefHeight="55.0" prefWidth="762.0" style="-fx-border-color: black;">
+            <Pane prefHeight="55.0" prefWidth="750.0" style="-fx-border-color: black;">
                <children>
                   <Text layoutX="264.0" layoutY="35.0" stroke="#b72a2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Deleting Horse Deatails ">
                      <font>

@@ -23,35 +23,54 @@
   <left>
     <Pane prefHeight="342.0" prefWidth="152.0" style="-fx-background-color: #5bb1e0;" BorderPane.alignment="CENTER">
       <children>
-        <VBox layoutY="-1.0" prefHeight="293.0" prefWidth="151.0">
+        <VBox layoutY="-1.0" prefHeight="353.0" prefWidth="151.0">
           <children>
-              <Button fx:id="button" mnemonicParsing="false" onAction="#home" prefHeight="42.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="Home" textAlignment="CENTER" textFill="WHITE">
+              <Button fx:id="button" mnemonicParsing="false" onAction="#home" prefHeight="61.0" prefWidth="151.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="Home" textAlignment="CENTER" textFill="WHITE">
                 <font>
                   <Font name="Times New Roman Bold" size="15.0" />
                 </font>
               </Button>
-            <Button mnemonicParsing="false" onAction="#AHD" prefHeight="43.0" prefWidth="153.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="AHD" textAlignment="CENTER" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#AHD" prefHeight="61.0" prefWidth="151.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="AHD" textAlignment="CENTER" textFill="WHITE">
               <font>
                 <Font name="Times New Roman Bold" size="15.0" />
               </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#UHD" prefHeight="44.0" prefWidth="153.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="UHD" textAlignment="CENTER" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#UHD" prefHeight="61.0" prefWidth="153.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="UHD" textAlignment="CENTER" textFill="WHITE">
               <font>
                 <Font name="Times New Roman Bold" size="15.0" />
               </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#DHD" prefHeight="45.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="DHD" textAlignment="CENTER" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#DHD" prefHeight="61.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="DHD" textAlignment="CENTER" textFill="WHITE">
               <font>
                 <Font name="Times New Roman Bold" size="15.0" />
               </font>
             </Button>
-                  <Button layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#VHD" prefHeight="45.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="VHD" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#VHD" prefHeight="61.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="VHD" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="185.0" mnemonicParsing="false" onAction="#SHD" prefHeight="61.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="SHD" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="231.0" mnemonicParsing="false" onAction="#Start" prefHeight="61.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 3px 0px;" text="Start" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Times New Roman Bold" size="15.0" />
                      </font>
                   </Button>
           </children>
         </VBox>
+            <VBox layoutY="482.0" prefHeight="61.0" prefWidth="152.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="152.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 3px 0px 0px 0px;" text="Exit" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
       </children>
     </Pane>
   </left>
