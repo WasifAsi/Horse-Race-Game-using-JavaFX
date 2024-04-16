@@ -2,28 +2,53 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="524.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java_coursework.AHD">
+<AnchorPane prefHeight="542.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java_coursework.AHD">
    <children>
-      <Text layoutX="54.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse ID : " />
-      <TextField fx:id="ID" layoutX="134.0" layoutY="50.0" promptText="Horse ID" />
+      <Text layoutX="54.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse ID : " />
+      <TextField fx:id="id" layoutX="134.0" layoutY="72.0" promptText="Horse ID" />
       <Text layoutX="54.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Name :" />
-      <TextField fx:id="Name" layoutX="134.0" layoutY="102.0" promptText="Horse Name" />
+      <TextField fx:id="name" layoutX="134.0" layoutY="102.0" promptText="Horse Name" />
       <Text layoutX="54.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Age : " />
       <TextField fx:id="age" layoutX="134.0" layoutY="236.0" promptText="Horse Age" />
       <Text layoutX="51.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jockey Name : " />
-      <TextField fx:id="Jockey" layoutX="145.0" layoutY="172.0" promptText="Jockey Name" />
+      <TextField fx:id="jockey" layoutX="145.0" layoutY="172.0" promptText="Jockey Name" />
       <Text layoutX="52.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Breed : " />
       <TextField fx:id="breed" layoutX="132.0" layoutY="296.0" promptText="Horse Breed" />
       <Text layoutX="62.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totel Races : " />
       <TextField fx:id="races" layoutX="142.0" layoutY="356.0" promptText="Totel Races" />
       <Text layoutX="72.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIns : " />
       <TextField fx:id="wins" layoutX="152.0" layoutY="409.0" promptText="Win count" />
-      <Text layoutX="420.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group : " />
-      <ChoiceBox fx:id="Group" layoutX="481.0" layoutY="57.0" prefWidth="150.0" />
+      <Text layoutX="420.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group : " />
+      <ChoiceBox fx:id="group" layoutX="481.0" layoutY="79.0" prefWidth="150.0" />
       <Button layoutX="349.0" layoutY="455.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Label fx:id="mylabel" layoutX="429.0" layoutY="378.0" prefHeight="30.0" prefWidth="254.0" />
+      <Pane layoutX="456.0" layoutY="185.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
+         <children>
+            <ImageView fx:id="horseImage" fitHeight="150.0" fitWidth="200.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Button layoutX="518.0" layoutY="385.0" mnemonicParsing="false" onAction="#onChooseImageClick" text="Choose Image" />
+      <VBox prefHeight="55.0" prefWidth="750.0">
+         <children>
+            <Pane prefHeight="55.0" prefWidth="735.0" style="-fx-border-color: black;">
+               <children>
+                  <Text layoutX="266.0" layoutY="35.0" stroke="#b72a2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Adding Horse Deatails ">
+                     <font>
+                        <Font name="Times New Roman Bold" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

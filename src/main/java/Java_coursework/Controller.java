@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class HelloController implements Initializable {
+public class Controller implements Initializable {
     @FXML
     private StackPane contentArea;
 
@@ -26,7 +26,7 @@ public class HelloController implements Initializable {
             contentArea.getChildren().setAll(fxml);
 
         }catch (IOException ex){
-            Logger.getLogger(HelloController.class.getName()).log(Level.SEVERE,null,ex);
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE,null,ex);
         }
 
     }
@@ -40,6 +40,24 @@ public class HelloController implements Initializable {
 
     public void AHD(javafx.event.ActionEvent actionEvent) throws IOException {
         Parent fxml = FXMLLoader.load(getClass().getResource("AHD.fxml"));
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(fxml);
+    }
+
+    public void UHD(javafx.event.ActionEvent actionEvent) throws IOException {
+        Parent fxml = FXMLLoader.load(getClass().getResource("UHD.fxml"));
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(fxml);
+    }
+
+    public void DHD(javafx.event.ActionEvent actionEvent) throws IOException {
+        Parent fxml = FXMLLoader.load(getClass().getResource("DHD.fxml"));
+        contentArea.getChildren().removeAll();
+        contentArea.getChildren().setAll(fxml);
+    }
+
+    public void VHD(javafx.event.ActionEvent actionEvent) throws IOException {
+        Parent fxml = FXMLLoader.load(getClass().getResource("VHD.fxml"));
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(fxml);
     }
