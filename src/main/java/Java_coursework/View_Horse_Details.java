@@ -11,12 +11,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.File;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class VHD implements Initializable {
+public class View_Horse_Details implements Initializable {
 
     @FXML
     private TableColumn<DataView, Integer> id;
@@ -47,7 +46,7 @@ public class VHD implements Initializable {
 
     private ObservableList<DataView> initialData = FXCollections.observableArrayList(); // Made it private
 
-    private AHD ahd = new AHD(); // Made it private
+    private Adding_Horse ahd = new Adding_Horse(); // Made it private
 
     @FXML
     private void populateData() {
@@ -84,10 +83,6 @@ public class VHD implements Initializable {
         }
         table.setItems(initialData);
     }
-
-
-
-
 
 
     private void bubbleSortWholeHorses() {

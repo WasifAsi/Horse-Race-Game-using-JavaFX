@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class UHD implements Initializable {
+public class Update_Horse_Detail implements Initializable {
 
     @FXML
     private TextField age;
@@ -67,7 +67,7 @@ public class UHD implements Initializable {
     static int indexToUpdate = -1;
 
 
-    AHD ahd = new AHD();
+    Adding_Horse ahd = new Adding_Horse();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

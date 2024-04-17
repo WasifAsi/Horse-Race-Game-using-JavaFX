@@ -25,7 +25,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 
-public class AHD implements Initializable {
+public class Adding_Horse implements Initializable {
 
     // FXML Variables
     @FXML

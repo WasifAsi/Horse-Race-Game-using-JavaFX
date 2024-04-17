@@ -8,14 +8,14 @@ import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
 
-public class DHD {
+public class Delete_Horse {
 
     @FXML
     private TextField id;
 
     int ID;
 
-    AHD ahd = new AHD();
+    Adding_Horse ahd = new Adding_Horse();
 
     public void Delete(ActionEvent event) {
         try {

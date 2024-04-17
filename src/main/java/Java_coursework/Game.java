@@ -15,61 +15,37 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class Game implements Initializable {
     @FXML
     private StackPane contentArea;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
             // Loading  the initial scene
-
             loadFXML("home.fxml");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 
-    @FXML
-    public void home(ActionEvent event) throws IOException {
-        loadFXML("home.fxml");
+    public void SHR(ActionEvent event) throws IOException {
+        loadFXML("Select_Horses_Randomly.fxml");
     }
 
-    public void AHD(ActionEvent event) throws IOException {
-        loadFXML("Adding_Horse.fxml");
+    public void SWH(ActionEvent event) throws IOException {
+        loadFXML("Select_Winning_Horses.fxml");
     }
 
-    public void UHD(ActionEvent event) throws IOException {
-        loadFXML("Update_Horse_Detail.fxml");
+    public void VWH(ActionEvent event) throws IOException {
+        loadFXML("View_Winning_Horse.fxml");
     }
 
-    public void DHD(ActionEvent event) throws IOException {
-        loadFXML("Delete_Horse.fxml");
-    }
-
-    public void VHD(ActionEvent event) throws IOException {
-        loadFXML("View_Horse_Details.fxml");
-    }
-
-    public void SHD(ActionEvent event) throws IOException {
-        loadFXML("Save_Horses.fxml");
-    }
-
-    @FXML
-    public void Start(ActionEvent event) throws IOException {
-        loadFXML("Start.fxml");
-    }
-
-
-    protected void loadFXML(String fxmlFileName) throws IOException {
+    private void loadFXML(String fxmlFileName) throws IOException {
         Parent fxml = FXMLLoader.load(getClass().getResource(fxmlFileName));
         contentArea.getChildren().clear();
         contentArea.getChildren().setAll(fxml);
     }
-
-
-    @FXML
-    public void exit(ActionEvent event) {
+    public void exit(ActionEvent event){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation Dialog");
         alert.setHeaderText("Are you sure you want to exit?");

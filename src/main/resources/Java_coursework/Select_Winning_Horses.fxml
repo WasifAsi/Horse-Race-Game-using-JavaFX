@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane prefHeight="542.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java_coursework.Select_Winning_Horses">
+   <top>
+      <Pane prefHeight="54.0" prefWidth="750.0" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <TableView fx:id="table" prefHeight="470.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="53.60000687837601" text="ID" />
+            <TableColumn fx:id="name" prefWidth="78.39995956420898" text="Name" />
+            <TableColumn fx:id="jockey" prefWidth="92.79998779296875" text="Jockey" />
+            <TableColumn fx:id="age" prefWidth="40.80000305175781" text="Age" />
+            <TableColumn fx:id="breed" prefWidth="79.20001220703125" text="Breed" />
+            <TableColumn fx:id="record" prefWidth="112.00006103515625" text="Race Record" />
+            <TableColumn fx:id="group" text="Group" />
+            <TableColumn fx:id="image" prefWidth="124.800048828125" text="Image" />
+            <TableColumn fx:id="time" prefWidth="84.00003662109373" text="time" />
+         </columns>
+      </TableView>
+   </center>
+</BorderPane>

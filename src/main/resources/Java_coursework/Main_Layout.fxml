@@ -64,7 +64,7 @@
         </VBox>
             <VBox layoutY="482.0" prefHeight="61.0" prefWidth="152.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="152.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 3px 0px 0px 0px;" text="Exit" textAlignment="CENTER" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#exit" prefHeight="74.0" prefWidth="152.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 3px 0px 0px 0px;" text="Exit" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Times New Roman Bold" size="15.0" />
                      </font>
