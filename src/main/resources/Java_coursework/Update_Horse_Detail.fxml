@@ -14,33 +14,36 @@
 
 <AnchorPane prefHeight="542.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java_coursework.Update_Horse_Detail">
     <children>
-        <Text layoutX="54.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse ID : " />
-        <TextField fx:id="id" layoutX="134.0" layoutY="81.0" promptText="Horse ID" />
-        <Text layoutX="54.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Name :" />
-        <TextField fx:id="name" layoutX="134.0" layoutY="172.0" promptText="Horse Name" />
-        <Text layoutX="54.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Age : " />
-        <TextField fx:id="age" layoutX="134.0" layoutY="236.0" promptText="Horse Age" />
-        <Text layoutX="51.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jockey Name : " />
-        <TextField fx:id="jockey" layoutX="145.0" layoutY="205.0" promptText="Jockey Name" />
-        <Text layoutX="52.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Breed : " />
-        <TextField fx:id="breed" layoutX="132.0" layoutY="296.0" promptText="Horse Breed" />
-        <Text layoutX="62.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totel Races : " />
-        <TextField fx:id="races" layoutX="142.0" layoutY="356.0" promptText="Totel Races" />
-        <Text layoutX="72.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIns : " />
-        <TextField fx:id="wins" layoutX="152.0" layoutY="409.0" promptText="Win count" />
-        <Text layoutX="420.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group : " />
-        <ChoiceBox fx:id="group" layoutX="481.0" layoutY="168.0" prefWidth="150.0" />
-        <Button layoutX="349.0" layoutY="455.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+        <Text layoutX="57.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse ID : " />
+        <TextField fx:id="id" layoutX="151.0" layoutY="97.0" promptText="Horse ID" />
+        <Text layoutX="55.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Name :" />
+        <TextField fx:id="name" layoutX="152.0" layoutY="158.0" promptText="New Horse Name" />
+        <Text layoutX="55.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Age : " />
+        <TextField fx:id="age" layoutX="152.0" layoutY="240.0" promptText="New Horse Age" />
+        <Text layoutX="56.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jockey Name : " />
+        <TextField fx:id="jockey" layoutX="152.0" layoutY="199.0" promptText="New Jockey Name" />
+        <Text layoutX="57.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Breed : " />
+        <TextField fx:id="breed" layoutX="152.0" layoutY="284.0" promptText="New Horse Breed" />
+        <Text layoutX="56.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totel Races : " />
+        <TextField fx:id="races" layoutX="152.0" layoutY="327.0" promptText="New Totel Races" />
+        <Text layoutX="56.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIns : " />
+        <TextField fx:id="wins" layoutX="152.0" layoutY="370.0" promptText="New Win count" />
+        <Text layoutX="414.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group : " />
+        <ChoiceBox fx:id="group" layoutX="481.0" layoutY="158.0" prefWidth="150.0" />
+        <Button layoutX="335.0" layoutY="455.0" mnemonicParsing="false" onAction="#submit" prefHeight="38.0" prefWidth="79.0" text="Submit" />
         <Label fx:id="mylabel" layoutX="429.0" layoutY="378.0" prefHeight="30.0" prefWidth="254.0" />
       <Separator layoutX="53.0" layoutY="134.0" prefHeight="16.0" prefWidth="592.0" />
-      <Button layoutX="349.0" layoutY="81.0" mnemonicParsing="false" onAction="#Check" text="Check" />
-      <Text layoutX="51.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ender the Horse ID Check" />
-      <Pane layoutX="448.0" layoutY="219.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
+      <Button layoutX="349.0" layoutY="96.0" mnemonicParsing="false" onAction="#Check" text="Check" />
+      <Text layoutX="57.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ender the Horse ID Check">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Pane layoutX="435.0" layoutY="203.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
          <children>
             <ImageView fx:id="horseImage" fitHeight="150.0" fitWidth="200.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Button layoutX="510.0" layoutY="423.0" mnemonicParsing="false" onAction="#onChooseImageClick" text="Choose Image" />
+      <Button layoutX="489.0" layoutY="408.0" mnemonicParsing="false" onAction="#onChooseImageClick" text="Choose Image" />
       <VBox prefHeight="56.0" prefWidth="750.0">
          <children>
             <Pane prefHeight="55.0" prefWidth="735.0" style="-fx-border-color: black;">

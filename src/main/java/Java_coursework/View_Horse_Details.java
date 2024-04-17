@@ -67,6 +67,7 @@ public class View_Horse_Details implements Initializable {
                 if (imageFile.exists()) {
                     Image image = new Image(imageFile.toURI().toString());
                     pic = new ImageView(image);
+
                     // Set maximum dimensions to resize the image
                     double maxWidth = 100; // Set your desired maximum width
                     double maxHeight = 100; // Set your desired maximum height

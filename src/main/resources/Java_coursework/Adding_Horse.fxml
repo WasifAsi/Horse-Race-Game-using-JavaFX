@@ -14,29 +14,29 @@
 <AnchorPane prefHeight="542.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java_coursework.Adding_Horse">
    <children>
       <Text layoutX="54.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse ID : " />
-      <TextField fx:id="id" layoutX="134.0" layoutY="72.0" promptText="Horse ID" />
-      <Text layoutX="54.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Name :" />
-      <TextField fx:id="name" layoutX="134.0" layoutY="102.0" promptText="Horse Name" />
-      <Text layoutX="54.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Age : " />
-      <TextField fx:id="age" layoutX="134.0" layoutY="236.0" promptText="Horse Age" />
-      <Text layoutX="51.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jockey Name : " />
-      <TextField fx:id="jockey" layoutX="145.0" layoutY="172.0" promptText="Jockey Name" />
-      <Text layoutX="52.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Breed : " />
-      <TextField fx:id="breed" layoutX="132.0" layoutY="296.0" promptText="Horse Breed" />
-      <Text layoutX="62.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totel Races : " />
-      <TextField fx:id="races" layoutX="142.0" layoutY="356.0" promptText="Totel Races" />
-      <Text layoutX="72.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIns : " />
-      <TextField fx:id="wins" layoutX="152.0" layoutY="409.0" promptText="Win count" />
-      <Text layoutX="420.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group : " />
-      <ChoiceBox fx:id="group" layoutX="481.0" layoutY="79.0" prefWidth="150.0" />
+      <TextField fx:id="id" layoutX="143.0" layoutY="72.0" promptText="Horse ID" />
+      <Text layoutX="54.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Name :" />
+      <TextField fx:id="name" layoutX="143.0" layoutY="119.0" promptText="Horse Name" />
+      <Text layoutX="54.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Age : " />
+      <TextField fx:id="age" layoutX="141.0" layoutY="210.0" promptText="Horse Age" />
+      <Text layoutX="53.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jockey Name : " />
+      <TextField fx:id="jockey" layoutX="143.0" layoutY="164.0" promptText="Jockey Name" />
+      <Text layoutX="52.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horse Breed : " />
+      <TextField fx:id="breed" layoutX="141.0" layoutY="254.0" promptText="Horse Breed" />
+      <Text layoutX="51.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totel Races : " />
+      <TextField fx:id="races" layoutX="143.0" layoutY="300.0" promptText="Totel Races" />
+      <Text layoutX="51.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WIns : " />
+      <TextField fx:id="wins" layoutX="141.0" layoutY="345.0" promptText="Win count" />
+      <Text layoutX="53.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group : " />
+      <ChoiceBox fx:id="group" layoutX="141.0" layoutY="391.0" prefWidth="150.0" />
       <Button layoutX="349.0" layoutY="455.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
       <Label fx:id="mylabel" layoutX="429.0" layoutY="378.0" prefHeight="30.0" prefWidth="254.0" />
-      <Pane layoutX="456.0" layoutY="185.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
+      <Pane layoutX="456.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
          <children>
             <ImageView fx:id="horseImage" fitHeight="150.0" fitWidth="200.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Button layoutX="518.0" layoutY="385.0" mnemonicParsing="false" onAction="#onChooseImageClick" text="Choose Image" />
+      <Button layoutX="510.0" layoutY="314.0" mnemonicParsing="false" onAction="#onChooseImageClick" text="Choose Image" />
       <VBox prefHeight="55.0" prefWidth="750.0">
          <children>
             <Pane prefHeight="55.0" prefWidth="735.0" style="-fx-border-color: black;">

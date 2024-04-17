@@ -204,9 +204,6 @@ public class Adding_Horse implements Initializable {
                         alert.setContentText("Wins Can't be higher than Total Races.");
                         alert.showAndWait();
                     }
-
-
-
                 }else {
                     Alert alert = new Alert(Alert.AlertType.WARNING);
                     alert.setTitle("Limit Reached");
@@ -214,6 +211,14 @@ public class Adding_Horse implements Initializable {
                     alert.setContentText("Already passed limit. \nMaximum 20 Horses can be addable .");
                     alert.showAndWait();
                 }
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Submitted");
+                alert.setHeaderText(null);
+                alert.setContentText("Successfully Added horse Details .");
+                alert.showAndWait();
+
+//        System.out.println(WholeHorses);
+                resetFields();
             }
 
         }catch (NumberFormatException e){
@@ -227,8 +232,6 @@ public class Adding_Horse implements Initializable {
             System.out.println(e);
         }
 
-        System.out.println(WholeHorses);
-        resetFields();
 
     }
 
@@ -290,10 +293,6 @@ public class Adding_Horse implements Initializable {
                 countD+=1;
             }
         }
-        System.out.println(countA);
-        System.out.println(countB);
-        System.out.println(countC);
-        System.out.println(countD);
     }
 
 }

@@ -9,12 +9,15 @@
 
 <AnchorPane prefHeight="542.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Java_coursework.Save_Horses">
     <children>
-        <Button layoutX="120.0" layoutY="113.0" mnemonicParsing="false" onAction="#save" text="Click here to Save as text" />
+        <Button layoutX="230.0" layoutY="243.0" mnemonicParsing="false" onAction="#save" prefHeight="55.0" prefWidth="289.0" text="Click here to Save as text">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
         <VBox prefHeight="55.0" prefWidth="750.0">
             <children>
                 <Pane prefHeight="55.0" prefWidth="750.0" style="-fx-border-color: black;">
                     <children>
-                        <Text layoutX="264.0" layoutY="35.0" stroke="#b72a2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Deleting Horse Deatails ">
+                        <Text layoutX="279.0" layoutY="35.0" stroke="#b72a2a" strokeType="OUTSIDE" strokeWidth="0.0" text="Save Horse Deatails ">
                             <font>
                                 <Font name="Times New Roman Bold" size="22.0" />
                             </font>

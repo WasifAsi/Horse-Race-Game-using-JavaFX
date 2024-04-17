@@ -6,8 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import java.io.BufferedReader;
@@ -33,6 +35,12 @@ public class Start {
         ReadGC();
         ReadGD();
 
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information Alert");
+        alert.setHeaderText("Can not Go Back");
+        alert.setContentText("You Can not go back to the previous page ");
+        alert.showAndWait();
+
         root = FXMLLoader.load(getClass().getResource("Game.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -43,15 +51,15 @@ public class Start {
 
 
     public  void ReadGA() {
-        String fileName = "Group A horse_details.txt"; // Name of the file to read
-
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        try {
+            String fileName = "Group A horse_details.txt";
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line;
-            while ((line = br.readLine()) != null) {
+            while ((line = br.readLine()) != null)
                 GroupA.add(line); // Add each line to the list
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        } catch (Exception e) {
+            System.out.println(e);
         }
 
         // Print the lines to verify they were read correctly
@@ -60,10 +68,12 @@ public class Start {
         }
     }
 
-    public  void ReadGB() {
-        String fileName = "Group B horse_details.txt"; // Name of the file to read
+        public  void ReadGB() {
+         // Name of the file to read
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        try {
+            String fileName = "Group B horse_details.txt";
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line;
             while ((line = br.readLine()) != null) {
                 GroupB.add(line); // Add each line to the list
@@ -79,9 +89,11 @@ public class Start {
     }
 
     public  void ReadGC() {
-        String fileName = "Group C horse_details.txt"; // Name of the file to read
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+
+        try  {
+            String fileName = "Group C horse_details.txt";
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line;
             while ((line = br.readLine()) != null) {
                 GroupC.add(line); // Add each line to the list

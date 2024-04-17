@@ -1,2 +1,1 @@
-[5, 5, 5, 5, 5, 5 Wins in 5 races, D, null]
-[6, 6, 6, 6, 6, 6 Wins in 6 races, D, C:\Users\wasif\OneDrive\Pictures\Screenshots\Screenshot 2024-02-24 174801.png]
+[4, 1, 1, 4, 4, 4 Wins in 4 races, D, C:\Users\wasif\OneDrive\Pictures\Screenshots\Screenshot 2024-02-24 131144.png]

@@ -22,7 +22,7 @@ public class Game implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             // Loading  the initial scene
-            loadFXML("home.fxml");
+            loadFXML("start-menu.fxml");
         } catch (IOException ex) {
             ex.printStackTrace();
         }

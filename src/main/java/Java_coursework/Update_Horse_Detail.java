@@ -80,7 +80,6 @@ public class Update_Horse_Detail implements Initializable {
 
             Boolean idExists = false;
 
-
             // Find the index of the horse with the given ID
             for (int i = 0; i < ahd.WholeHorses.size(); i++) {
                 ArrayList<Object> horse = ahd.WholeHorses.get(i);
@@ -108,7 +107,6 @@ public class Update_Horse_Detail implements Initializable {
                 id.clear();
             }
 
-
         } catch (NumberFormatException e) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Wrong input / Blank");
@@ -120,7 +118,6 @@ public class Update_Horse_Detail implements Initializable {
         }
     }
 
-
     public void submit(ActionEvent event) {
         GroupCount();
         try{
@@ -130,7 +127,6 @@ public class Update_Horse_Detail implements Initializable {
             Breed = breed.getText();
             Wins = Integer.parseInt(wins.getText());
             TotalRace = Integer.parseInt(races.getText());
-
             Group = group.getValue();
 
             ArrayList<Object> horseDetails = ahd.WholeHorses.get(indexToUpdate);
@@ -148,10 +144,8 @@ public class Update_Horse_Detail implements Initializable {
                             horseDetails.set(3,Age);
                             horseDetails.set(4,Breed);
                             horseDetails.set(5,raceRecord);
-
                             horseDetails.set(6,Group);
                             horseDetails.set(7,imagePath);
-
 
                         }else {
                             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -168,7 +162,6 @@ public class Update_Horse_Detail implements Initializable {
                             horseDetails.set(3,Age);
                             horseDetails.set(4,Breed);
                             horseDetails.set(5,raceRecord);
-
                             horseDetails.set(6,Group);
                             horseDetails.set(7,imagePath);
 
@@ -187,7 +180,6 @@ public class Update_Horse_Detail implements Initializable {
                             horseDetails.set(3,Age);
                             horseDetails.set(4,Breed);
                             horseDetails.set(5,raceRecord);
-
                             horseDetails.set(6,Group);
                             horseDetails.set(7,imagePath);
 
@@ -197,7 +189,6 @@ public class Update_Horse_Detail implements Initializable {
                             alert.setHeaderText(null);
                             alert.setContentText("Only 5 horses for each group ");
                             alert.showAndWait();
-
                         }
 
                     }else if (Group == "D"){
@@ -207,7 +198,6 @@ public class Update_Horse_Detail implements Initializable {
                             horseDetails.set(3,Age);
                             horseDetails.set(4,Breed);
                             horseDetails.set(5,raceRecord);
-
                             horseDetails.set(6,Group);
                             horseDetails.set(7,imagePath);
 
@@ -228,8 +218,6 @@ public class Update_Horse_Detail implements Initializable {
                     alert.showAndWait();
                 }
 
-
-
             }else {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Limit Reached");
@@ -237,8 +225,13 @@ public class Update_Horse_Detail implements Initializable {
                 alert.setContentText("Already passed limit. \nMaximum 20 Horses can be addable .");
                 alert.showAndWait();
             }
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Updated");
+            alert.setHeaderText(null);
+            alert.setContentText("Successfully Updated horse Details .");
+            alert.showAndWait();
 
-            System.out.println(ahd.WholeHorses);
+            resetFields();
 
 
         } catch (NumberFormatException e) {
@@ -251,7 +244,6 @@ public class Update_Horse_Detail implements Initializable {
         } catch (Exception e) {
             System.out.println(e);
         }
-        resetFields();
     }
 
     public void onChooseImageClick(ActionEvent event) {
@@ -304,9 +296,5 @@ public class Update_Horse_Detail implements Initializable {
                 countD+=1;
             }
         }
-        System.out.println(countA);
-        System.out.println(countB);
-        System.out.println(countC);
-        System.out.println(countD);
     }
 }
