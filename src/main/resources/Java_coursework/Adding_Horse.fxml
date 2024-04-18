@@ -29,11 +29,11 @@
       <TextField fx:id="wins" layoutX="141.0" layoutY="345.0" promptText="Win count" />
       <Text layoutX="53.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group : " />
       <ChoiceBox fx:id="group" layoutX="141.0" layoutY="391.0" prefWidth="150.0" />
-      <Button layoutX="349.0" layoutY="455.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Button layoutX="329.0" layoutY="454.0" mnemonicParsing="false" onAction="#submit" prefHeight="40.0" prefWidth="92.0" text="Submit" />
       <Label fx:id="mylabel" layoutX="429.0" layoutY="378.0" prefHeight="30.0" prefWidth="254.0" />
-      <Pane layoutX="456.0" layoutY="105.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
+      <Pane layoutX="456.0" layoutY="101.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
          <children>
-            <ImageView fx:id="horseImage" fitHeight="150.0" fitWidth="200.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="horseImage" fitHeight="150.0" fitWidth="171.0" layoutX="16.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
       <Button layoutX="510.0" layoutY="314.0" mnemonicParsing="false" onAction="#onChooseImageClick" text="Choose Image" />

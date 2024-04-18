@@ -9,13 +9,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 public class Start {
 
     private Stage stage;
@@ -35,17 +32,26 @@ public class Start {
         ReadGC();
         ReadGD();
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information Alert");
-        alert.setHeaderText("Can not Go Back");
-        alert.setContentText("You Can not go back to the previous page ");
-        alert.showAndWait();
+        if(GroupA.isEmpty() || GroupB.isEmpty() || GroupC.isEmpty() || GroupD.isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Group or more Groups null");
+            alert.setHeaderText(null);
+            alert.setContentText("Check All the the groups. \n Each Group must have at least one Horse detail.");
+            alert.showAndWait();
 
-        root = FXMLLoader.load(getClass().getResource("Game.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        }else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information Alert");
+            alert.setHeaderText("Can not Go Back");
+            alert.setContentText("You Can not go back to the previous page ");
+            alert.showAndWait();
+
+            root = FXMLLoader.load(getClass().getResource("Game.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
 
     }
 
@@ -55,34 +61,34 @@ public class Start {
             String fileName = "Group A horse_details.txt";
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line;
-            while ((line = br.readLine()) != null)
-                GroupA.add(line); // Add each line to the list
+            while ((line = br.readLine()) != null) {
+                GroupA.add(line);                       // Add each line to the list
+            }
 
         } catch (Exception e) {
             System.out.println(e);
         }
 
-        // Print the lines to verify they were read correctly
         for (Object horses : GroupA) {
             System.out.println(horses);
         }
+
     }
 
-        public  void ReadGB() {
-         // Name of the file to read
+    public  void ReadGB() {
+
 
         try {
             String fileName = "Group B horse_details.txt";
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line;
             while ((line = br.readLine()) != null) {
-                GroupB.add(line); // Add each line to the list
+                GroupB.add(line);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // Print the lines to verify they were read correctly
         for (Object horses : GroupB) {
             System.out.println(horses);
         }
@@ -90,41 +96,36 @@ public class Start {
 
     public  void ReadGC() {
 
-
         try  {
             String fileName = "Group C horse_details.txt";
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line;
             while ((line = br.readLine()) != null) {
-                GroupC.add(line); // Add each line to the list
+                GroupC.add(line);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // Print the lines to verify they were read correctly
         for (Object horses : GroupC) {
             System.out.println(horses);
         }
     }
 
     public  void ReadGD() {
-        String fileName = "Group D horse_details.txt"; // Name of the file to read
+        String fileName = "Group D horse_details.txt";
 
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = br.readLine()) != null) {
-                GroupD.add(line); // Add each line to the list
+                GroupD.add(line);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // Print the lines to verify they were read correctly
         for (Object horses : GroupD) {
             System.out.println(horses);
         };
     }
 }
-
-

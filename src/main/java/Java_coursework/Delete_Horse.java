@@ -15,19 +15,18 @@ public class Delete_Horse {
 
     int ID;
 
-    Adding_Horse ahd = new Adding_Horse();
 
     public void Delete(ActionEvent event) {
         try {
             ID = Integer.parseInt(id.getText());
 
-            Boolean idExists = false;
+            boolean idExists = false;
             int indexToRemove = -1;
 
             // Find the index of the horse with the given ID
-            for (int i = 0; i < ahd.WholeHorses.size(); i++) {
-                ArrayList<Object> horse = ahd.WholeHorses.get(i);
-                int horseID = (int) horse.get(0);
+            for (int i = 0; i < Adding_Horse.WholeHorses.size(); i++) {
+                ArrayList horse = Adding_Horse.WholeHorses.get(i);
+                int horseID = (int) horse.getFirst();
                 if (horseID == ID) {
                     idExists = true;
                     indexToRemove = i;
@@ -37,7 +36,7 @@ public class Delete_Horse {
 
             if (idExists) {
                 // Remove the horse entry from the ArrayList
-                ahd.WholeHorses.remove(indexToRemove);
+                Adding_Horse.WholeHorses.remove(indexToRemove);
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("ID is there");
@@ -63,7 +62,7 @@ public class Delete_Horse {
             alert.setContentText("Input shoud be validated. \nDont leave Blank");
             alert.showAndWait();
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("error Occured");
         }
     }
 }

@@ -55,7 +55,7 @@ public class Select_Horses_Randomly implements Initializable {
 
     Random rand = new Random();
 
-    Start start = new Start();
+
 
     public static ArrayList <ArrayList> SelectedHorses = new ArrayList();
 
@@ -133,20 +133,20 @@ public class Select_Horses_Randomly implements Initializable {
 
     public void Selected() {
 
-        int A_length = start.GroupA.size();
-        int B_length = start.GroupB.size();
-        int C_length = start.GroupC.size();
-        int D_length = start.GroupD.size();
+        int A_length = Start.GroupA.size();
+        int B_length = Start.GroupB.size();
+        int C_length = Start.GroupC.size();
+        int D_length = Start.GroupD.size();
 
         int A_selected = rand.nextInt(A_length);
         int B_selected = rand.nextInt(B_length);
         int C_selected = rand.nextInt(C_length);
         int D_selected = rand.nextInt(D_length);
 
-        Selected_A = (String) start.GroupA.get(A_selected);
-        Selected_B = (String) start.GroupB.get(B_selected);
-        Selected_C = (String) start.GroupC.get(C_selected);
-        Selected_D = (String) start.GroupD.get(D_selected);
+        Selected_A = (String) Start.GroupA.get(A_selected);
+        Selected_B = (String) Start.GroupB.get(B_selected);
+        Selected_C = (String) Start.GroupC.get(C_selected);
+        Selected_D = (String) Start.GroupD.get(D_selected);
 
         System.out.println(Selected_A);
         System.out.println(Selected_B);

@@ -4,25 +4,21 @@ package Java_coursework;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-
-
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
-
-
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 
 public class Adding_Horse implements Initializable {
@@ -50,50 +46,45 @@ public class Adding_Horse implements Initializable {
 
     private final String [] groups={"A","B","C","D"};
     int ID, Age ,Wins , TotalRace ;
-    String Name , Jockey , Group , Breed ;
+    String Name , Jockey , Group , Breed , raceRecord ;
 
     int countA = 0;
     int countB = 0;
     int countC = 0;
     int countD = 0;
 
-    private File selectedImageFile;
     private String imagePath;
-
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        // Initializing Groups A,B,C,D in check box
         group.getItems().addAll(groups);
     }
 
-
-    public  static  ArrayList<ArrayList> WholeHorses = new ArrayList();
+    //Creating an Arraylist that contain all the details of horses and that arraylist can be access in all classes
+    public  static  ArrayList<ArrayList> WholeHorses = new ArrayList<>();
 
 
     public void submit(ActionEvent event) {
+        // Getting count of the group in the first
         GroupCount();
-
-        ArrayList horseDetails = new ArrayList();
 
         try {
             ID = Integer.parseInt(id.getText());
-            Age = Integer.parseInt(age.getText());
-            Wins = Integer.parseInt(wins.getText());
-            TotalRace = Integer.parseInt(races.getText());
-
             Name = name.getText();
             Jockey = jockey.getText();
+            Age = Integer.parseInt(age.getText());
             Breed = breed.getText();
-
+            Wins = Integer.parseInt(wins.getText());
+            TotalRace = Integer.parseInt(races.getText());
             Group = group.getValue();
 
 
-//
             boolean idExists = false;
 
-            for (ArrayList<Object> horse : WholeHorses) {
-                int id = (int) horse.get(0);
+            for (ArrayList horse : WholeHorses) {
+                int id = (int) horse.getFirst();
                 if (id == ID) {
                     idExists = true;
                     break;
@@ -110,90 +101,61 @@ public class Adding_Horse implements Initializable {
                 if (WholeHorses.size()<20) {
 
                     if (Wins <= TotalRace) {
-                        String raceRecord = Wins + " Wins in " + TotalRace + " races";
+                        raceRecord = Wins + " Wins in " + TotalRace + " races";
 
+                        if (!imagePath.isEmpty()) {
 
-                        if (Group == "A"){
-                            if (countA<5){
-                                horseDetails.add(ID);
-                                horseDetails.add(Name);
-                                horseDetails.add(Jockey);
-                                horseDetails.add(Age);
-                                horseDetails.add(Breed);
-                                horseDetails.add(raceRecord);
-                                horseDetails.add(Group);
-                                horseDetails.add(imagePath);
+                            if (Group == "A") {
+                                if (countA < 5) {
+                                    HorseList(ID, Name, Jockey, Age, Breed, raceRecord, Group, imagePath);
+                                    resetFields();
 
-                                WholeHorses.add(horseDetails);
-                            }else {
-                                Alert alert = new Alert(Alert.AlertType.WARNING);
-                                alert.setTitle("Group A is Full");
-                                alert.setHeaderText(null);
-                                alert.setContentText("Only 5 horses for each group ");
-                                alert.showAndWait();
-                            }
+                                } else {
+                                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                                    alert.setTitle("Group A is Full");
+                                    alert.setHeaderText(null);
+                                    alert.setContentText("Only 5 horses for each group ");
+                                    alert.showAndWait();
+                                }
 
-                        }else if (Group == "B"){
-                            if (countB<5){
-                                horseDetails.add(ID);
-                                horseDetails.add(Name);
-                                horseDetails.add(Jockey);
-                                horseDetails.add(Age);
-                                horseDetails.add(Breed);
-                                horseDetails.add(raceRecord);
-                                horseDetails.add(Group);
-                                horseDetails.add(imagePath);
+                            } else if (Group.equals("B")) {
+                                if (countB < 5) {
+                                    HorseList(ID, Name, Jockey, Age, Breed, raceRecord, Group, imagePath);
+                                    resetFields();
+                                } else {
+                                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                                    alert.setTitle("Group B is Full");
+                                    alert.setHeaderText(null);
+                                    alert.setContentText("Only 5 horses for each group ");
+                                    alert.showAndWait();
+                                }
 
-                                WholeHorses.add(horseDetails);
-                            }else {
-                                Alert alert = new Alert(Alert.AlertType.WARNING);
-                                alert.setTitle("Group B is Full");
-                                alert.setHeaderText(null);
-                                alert.setContentText("Only 5 horses for each group ");
-                                alert.showAndWait();
-                            }
+                            } else if (Group.equals("C")) {
+                                if (countC < 5) {
+                                    HorseList(ID, Name, Jockey, Age, Breed, raceRecord, Group, imagePath);
+                                    resetFields();
 
-                        }else if (Group == "C"){
-                            if (countC<5){
-                                horseDetails.add(ID);
-                                horseDetails.add(Name);
-                                horseDetails.add(Jockey);
-                                horseDetails.add(Age);
-                                horseDetails.add(Breed);
-                                horseDetails.add(raceRecord);
-                                horseDetails.add(Group);
-                                horseDetails.add(imagePath);
+                                } else {
+                                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                                    alert.setTitle("Group C is Full");
+                                    alert.setHeaderText(null);
+                                    alert.setContentText("Only 5 horses for each group ");
+                                    alert.showAndWait();
 
-                                WholeHorses.add(horseDetails);
+                                }
 
-                            }else {
-                                Alert alert = new Alert(Alert.AlertType.WARNING);
-                                alert.setTitle("Group C is Full");
-                                alert.setHeaderText(null);
-                                alert.setContentText("Only 5 horses for each group ");
-                                alert.showAndWait();
+                            } else if (Group.equals("D")) {
+                                if (countD < 5) {
+                                    HorseList(ID, Name, Jockey, Age, Breed, raceRecord, Group, imagePath);
+                                    resetFields();
 
-                            }
-
-                        }else if (Group == "D"){
-                            if (countD<5){
-                                horseDetails.add(ID);
-                                horseDetails.add(Name);
-                                horseDetails.add(Jockey);
-                                horseDetails.add(Age);
-                                horseDetails.add(Breed);
-                                horseDetails.add(raceRecord);
-                                horseDetails.add(Group);
-                                horseDetails.add(imagePath);
-
-                                WholeHorses.add(horseDetails);
-
-                            }else {
-                                Alert alert = new Alert(Alert.AlertType.WARNING);
-                                alert.setTitle("Group D is Full");
-                                alert.setHeaderText(null);
-                                alert.setContentText("Only 5 horses for each group ");
-                                alert.showAndWait();
+                                } else {
+                                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                                    alert.setTitle("Group D is Full");
+                                    alert.setHeaderText(null);
+                                    alert.setContentText("Only 5 horses for each group ");
+                                    alert.showAndWait();
+                                }
                             }
                         }
 
@@ -211,21 +173,20 @@ public class Adding_Horse implements Initializable {
                     alert.setContentText("Already passed limit. \nMaximum 20 Horses can be addable .");
                     alert.showAndWait();
                 }
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Submitted");
-                alert.setHeaderText(null);
-                alert.setContentText("Successfully Added horse Details .");
-                alert.showAndWait();
-
-//        System.out.println(WholeHorses);
-                resetFields();
             }
 
         }catch (NumberFormatException e){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Wrong input / Blank");
             alert.setHeaderText(null);
-            alert.setContentText("Input shoud be validated. \nDont leave Blank");
+            alert.setContentText("Input should be validated. \nDont leave Blank");
+            alert.showAndWait();
+
+        }catch (NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Image or Group is not selected");
+            alert.setHeaderText(null);
+            alert.setContentText("Select Image or a Group that u missed ");
             alert.showAndWait();
         }
         catch (Exception e){
@@ -235,6 +196,23 @@ public class Adding_Horse implements Initializable {
 
     }
 
+    private void HorseList(int ID,String Name , String Jockey, int Age ,String Breed,
+                           String raceRecord,String Group,String imagePath){
+
+        ArrayList horseDetails = new ArrayList();
+
+        horseDetails.add(ID);
+        horseDetails.add(Name);
+        horseDetails.add(Jockey);
+        horseDetails.add(Age);
+        horseDetails.add(Breed);
+        horseDetails.add(raceRecord);
+        horseDetails.add(Group);
+        horseDetails.add(imagePath);
+
+        WholeHorses.add(horseDetails);
+    }
+
 
     @FXML
     public void onChooseImageClick(ActionEvent event) {
@@ -242,8 +220,7 @@ public class Adding_Horse implements Initializable {
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
         );
-        selectedImageFile = fileChooser.showOpenDialog((Stage) ((Node) event.getSource()).getScene().getWindow());
-        System.out.println(selectedImageFile);
+        File selectedImageFile = fileChooser.showOpenDialog((Stage) ((Node) event.getSource()).getScene().getWindow());
         if (selectedImageFile != null) {
             try {
                 Image image = new Image(new FileInputStream(selectedImageFile));
@@ -256,9 +233,13 @@ public class Adding_Horse implements Initializable {
         }
     }
 
-
-
     private void resetFields() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Submitted");
+        alert.setHeaderText(null);
+        alert.setContentText("Successfully Added horse Details .");
+        alert.showAndWait();
+
         countA = 0;
         countB = 0;
         countC = 0;
@@ -278,19 +259,25 @@ public class Adding_Horse implements Initializable {
 
     }
 
-    private void GroupCount(){
+    // For J-unit changed to Protected.
+    protected void GroupCount(){
         for (ArrayList<Object> horse : WholeHorses) {
             String GROUP = (String) horse.get(6);
 
 
-            if (GROUP== "A"){
-                countA+=1;
-            }else if (GROUP== "B"){
-                countB+=1;
-            }else if (GROUP== "C"){
-                countC+=1;
-            }else if (GROUP== "D"){
-                countD+=1;
+            switch (GROUP) {
+                case "A" :
+                    countA += 1;
+                    break;
+                case "B" :
+                    countB += 1;
+                    break;
+                case "C" :
+                    countC += 1;
+                    break;
+                case "D" :
+                    countD += 1;
+                    break;
             }
         }
     }

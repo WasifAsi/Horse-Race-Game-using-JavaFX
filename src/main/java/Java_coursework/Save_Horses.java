@@ -16,10 +16,10 @@ public class Save_Horses {
         ArrayList<String> groupC = new ArrayList<>();
         ArrayList<String> groupD = new ArrayList<>();
 
-        // Appending Horse Details and Horse IDs to Lists
+        // Appending Horse Details to Lists
         for (ArrayList<Object> horse : Adding_Horse.WholeHorses) {
-            String group = horse.get(6).toString(); // Assuming horse details are at index 6
-            String horseInfo = horse.toString(); // Convert horse details to string representation
+            String group = horse.get(6).toString(); // Group details are at index 6
+            String horseInfo = horse.toString();
             switch (group) {
                 case "A":
                     groupA.add(horseInfo);
@@ -37,16 +37,20 @@ public class Save_Horses {
                     break;
             }
         }
+// To Start the game at least 4 Horse Details from each group should be there.
+
+// Checking for each group have or not at least one detail
         if (groupA.isEmpty() || groupB.isEmpty() || groupC.isEmpty() || groupD.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Empty Groups");
             alert.setHeaderText("One or more groups are empty");
             alert.setContentText("Please make sure all groups have at least one horse before saving.");
             alert.showAndWait();
-            return; // Stop further execution
+
         }else {
 
             // Saving horse details according to the group in one Text file
+
             try (FileWriter file = new FileWriter("horse_details.txt")) {
                 file.write("Group A\n");
                 for (String horse : groupA) {
@@ -68,7 +72,6 @@ public class Save_Horses {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
 
             try {
 

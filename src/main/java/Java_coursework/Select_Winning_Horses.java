@@ -49,7 +49,6 @@ public class Select_Winning_Horses implements Initializable {
     private TableView<Selected_horseTime> table;
 
 
-    Select_Horses_Randomly shr = new Select_Horses_Randomly();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -72,17 +71,17 @@ public class Select_Winning_Horses implements Initializable {
 
     public void Rand_time(){
         Random rand = new Random();
-        for (ArrayList horse:shr.SelectedHorses){
+        for (ArrayList horse: Select_Horses_Randomly.SelectedHorses){
             horse.add(rand.nextInt(10,90));
             System.out.println(horse);
         }
     }
 
     private void bubbleSortSelectedHorses() {
-        for (int i = 0; i < shr.SelectedHorses.size() - 1; i++) {
-            for (int j = 0; j < shr.SelectedHorses.size() - i - 1; j++) {
-                ArrayList<Object> horse1 = shr.SelectedHorses.get(j);
-                ArrayList<Object> horse2 = shr.SelectedHorses.get(j + 1);
+        for (int i = 0; i < Select_Horses_Randomly.SelectedHorses.size() - 1; i++) {
+            for (int j = 0; j < Select_Horses_Randomly.SelectedHorses.size() - i - 1; j++) {
+                ArrayList<Object> horse1 = Select_Horses_Randomly.SelectedHorses.get(j);
+                ArrayList<Object> horse2 = Select_Horses_Randomly.SelectedHorses.get(j + 1);
 
                 // Compare the first elements of the horses
                 int horse1FirstElement = (int) horse1.get(8);
@@ -90,8 +89,8 @@ public class Select_Winning_Horses implements Initializable {
 
                 if (horse1FirstElement > horse2FirstElement) {
                     // Swap the horses
-                    shr.SelectedHorses.set(j, horse2);
-                    shr.SelectedHorses.set(j + 1, horse1);
+                    Select_Horses_Randomly.SelectedHorses.set(j, horse2);
+                    Select_Horses_Randomly.SelectedHorses.set(j + 1, horse1);
                 }
             }
         }
@@ -100,7 +99,7 @@ public class Select_Winning_Horses implements Initializable {
     private ObservableList<Selected_horseTime> initialData = FXCollections.observableArrayList();
 
     private void populateData() {
-        for (ArrayList<Object> horse : shr.SelectedHorses) {
+        for (ArrayList<Object> horse : Select_Horses_Randomly.SelectedHorses) {
             int ID = (int) horse.get(0);
             String Name = (String) horse.get(1);
             String Jockey = (String) horse.get(2);

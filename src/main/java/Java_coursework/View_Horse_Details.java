@@ -69,8 +69,8 @@ public class View_Horse_Details implements Initializable {
                     pic = new ImageView(image);
 
                     // Set maximum dimensions to resize the image
-                    double maxWidth = 100; // Set your desired maximum width
-                    double maxHeight = 100; // Set your desired maximum height
+                    double maxWidth = 100; // Setting  maximum width
+                    double maxHeight = 100; // Setting maximum height
                     pic.setPreserveRatio(true);
                     pic.setFitWidth(maxWidth);
                     pic.setFitHeight(maxHeight);

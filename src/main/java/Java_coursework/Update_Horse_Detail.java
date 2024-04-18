@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -38,9 +37,6 @@ public class Update_Horse_Detail implements Initializable {
     private TextField jockey;
 
     @FXML
-    private Label mylabel;
-
-    @FXML
     private TextField name;
 
     @FXML
@@ -60,17 +56,15 @@ public class Update_Horse_Detail implements Initializable {
     int countC = 0;
     int countD = 0;
 
-    private File selectedImageFile;
     private String imagePath;
 
 
     static int indexToUpdate = -1;
 
 
-    Adding_Horse ahd = new Adding_Horse();
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        // Initializing Groups A,B,C,D in check box
         group.getItems().addAll(groups);
     }
 
@@ -78,12 +72,12 @@ public class Update_Horse_Detail implements Initializable {
         try {
             ID = Integer.parseInt(id.getText());
 
-            Boolean idExists = false;
+            boolean idExists = false;
 
             // Find the index of the horse with the given ID
-            for (int i = 0; i < ahd.WholeHorses.size(); i++) {
-                ArrayList<Object> horse = ahd.WholeHorses.get(i);
-                int horseID = (int) horse.get(0);
+            for (int i = 0; i < Adding_Horse.WholeHorses.size(); i++) {
+                ArrayList<Object> horse = Adding_Horse.WholeHorses.get(i);
+                int horseID = (int) horse.getFirst();
                 if (horseID == ID) {
                     idExists = true;
                     indexToUpdate = i;
@@ -119,7 +113,9 @@ public class Update_Horse_Detail implements Initializable {
     }
 
     public void submit(ActionEvent event) {
+        // Getting count of the group in the first
         GroupCount();
+
         try{
             Name = name.getText();
             Jockey = jockey.getText();
@@ -129,23 +125,16 @@ public class Update_Horse_Detail implements Initializable {
             TotalRace = Integer.parseInt(races.getText());
             Group = group.getValue();
 
-            ArrayList<Object> horseDetails = ahd.WholeHorses.get(indexToUpdate);
-
-            if (ahd.WholeHorses.size()<20) {
+            if (Adding_Horse.WholeHorses.size()<20) {
 
                 if (Wins <= TotalRace) {
                     String raceRecord = Wins + " Wins in " + TotalRace + " races";
 
 
-                    if (Group == "A"){
+                    if (Group.equals("A")){
                         if (countA<5){
-                            horseDetails.set(1,Name);
-                            horseDetails.set(2,Jockey);
-                            horseDetails.set(3,Age);
-                            horseDetails.set(4,Breed);
-                            horseDetails.set(5,raceRecord);
-                            horseDetails.set(6,Group);
-                            horseDetails.set(7,imagePath);
+                            HorseList( Name, Jockey, Age, Breed, raceRecord, Group, imagePath);
+                            resetFields();
 
                         }else {
                             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -155,15 +144,10 @@ public class Update_Horse_Detail implements Initializable {
                             alert.showAndWait();
                         }
 
-                    }else if (Group == "B"){
+                    }else if (Group.equals("B")){
                         if (countB<5){
-                            horseDetails.set(1,Name);
-                            horseDetails.set(2,Jockey);
-                            horseDetails.set(3,Age);
-                            horseDetails.set(4,Breed);
-                            horseDetails.set(5,raceRecord);
-                            horseDetails.set(6,Group);
-                            horseDetails.set(7,imagePath);
+                            HorseList(Name, Jockey, Age, Breed, raceRecord, Group, imagePath);
+                            resetFields();
 
                         }else {
                             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -173,15 +157,10 @@ public class Update_Horse_Detail implements Initializable {
                             alert.showAndWait();
                         }
 
-                    }else if (Group == "C"){
+                    }else if (Group.equals("C")){
                         if (countC<5){
-                            horseDetails.set(1,Name);
-                            horseDetails.set(2,Jockey);
-                            horseDetails.set(3,Age);
-                            horseDetails.set(4,Breed);
-                            horseDetails.set(5,raceRecord);
-                            horseDetails.set(6,Group);
-                            horseDetails.set(7,imagePath);
+                            HorseList(Name, Jockey, Age, Breed, raceRecord, Group, imagePath);
+                            resetFields();
 
                         }else {
                             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -191,15 +170,10 @@ public class Update_Horse_Detail implements Initializable {
                             alert.showAndWait();
                         }
 
-                    }else if (Group == "D"){
+                    }else if (Group.equals("D")){
                         if (countD<5){
-                            horseDetails.set(1,Name);
-                            horseDetails.set(2,Jockey);
-                            horseDetails.set(3,Age);
-                            horseDetails.set(4,Breed);
-                            horseDetails.set(5,raceRecord);
-                            horseDetails.set(6,Group);
-                            horseDetails.set(7,imagePath);
+                            HorseList(Name, Jockey, Age, Breed, raceRecord, Group, imagePath);
+                            resetFields();
 
                         }else {
                             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -225,14 +199,6 @@ public class Update_Horse_Detail implements Initializable {
                 alert.setContentText("Already passed limit. \nMaximum 20 Horses can be addable .");
                 alert.showAndWait();
             }
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Updated");
-            alert.setHeaderText(null);
-            alert.setContentText("Successfully Updated horse Details .");
-            alert.showAndWait();
-
-            resetFields();
-
 
         } catch (NumberFormatException e) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -241,9 +207,41 @@ public class Update_Horse_Detail implements Initializable {
             alert.setContentText("Input shoud be validated. \nDont leave Blank");
             alert.showAndWait();
 
-        } catch (Exception e) {
+        }catch (NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Image or Group is not selected");
+            alert.setHeaderText(null);
+            alert.setContentText("Select Image or a Group that u missed ");
+            alert.showAndWait();
+
+        }catch (IndexOutOfBoundsException e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("ID not checked");
+            alert.setHeaderText(null);
+            alert.setContentText("First check The ID ");
+            alert.showAndWait();
+        }
+        catch (Exception e) {
             System.out.println(e);
         }
+    }
+    private void HorseList(String Name , String Jockey, int Age ,String Breed,
+                           String raceRecord,String Group,String imagePath){
+
+        ArrayList<Object> horseDetails = Adding_Horse.WholeHorses.get(indexToUpdate);
+
+
+
+
+        horseDetails.set(1,Name);
+        horseDetails.set(2,Jockey);
+        horseDetails.set(3,Age);
+        horseDetails.set(4,Breed);
+        horseDetails.set(5,raceRecord);
+        horseDetails.set(6,Group);
+        horseDetails.set(7,imagePath);
+
+
     }
 
     public void onChooseImageClick(ActionEvent event) {
@@ -251,7 +249,7 @@ public class Update_Horse_Detail implements Initializable {
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
         );
-        selectedImageFile = fileChooser.showOpenDialog((Stage) ((Node) event.getSource()).getScene().getWindow());
+        File selectedImageFile = fileChooser.showOpenDialog((Stage) ((Node) event.getSource()).getScene().getWindow());
         if (selectedImageFile != null) {
             try {
                 Image image = new Image(new FileInputStream(selectedImageFile));
@@ -265,6 +263,12 @@ public class Update_Horse_Detail implements Initializable {
 
 
     private void resetFields() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Submitted");
+        alert.setHeaderText(null);
+        alert.setContentText("Successfully Added horse Details .");
+        alert.showAndWait();
+
         countA = 0;
         countB = 0;
         countC = 0;
@@ -278,22 +282,29 @@ public class Update_Horse_Detail implements Initializable {
         jockey.clear();
         breed.clear();
         group.getSelectionModel().clearSelection();
+        horseImage.setImage(null);
+        imagePath = null;
     }
 
 
     private void GroupCount(){
-        for (ArrayList<Object> horse : ahd.WholeHorses) {
+        for (ArrayList<Object> horse : Adding_Horse.WholeHorses) {
             String GROUP = (String) horse.get(6);
 
 
-            if (GROUP== "A"){
-                countA+=1;
-            }else if (GROUP== "B"){
-                countB+=1;
-            }else if (GROUP== "C"){
-                countC+=1;
-            }else if (GROUP== "D"){
-                countD+=1;
+            switch (GROUP) {
+                case "A" :
+                    countA += 1;
+                    break;
+                case "B" :
+                    countB += 1;
+                    break;
+                case "C" :
+                    countC += 1;
+                    break;
+                case "D" :
+                    countD += 1;
+                    break;
             }
         }
     }

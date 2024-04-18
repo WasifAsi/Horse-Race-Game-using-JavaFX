@@ -27,24 +27,22 @@ public class View_Winning_Horse implements Initializable {
         series1.getData().add(new XYChart.Data("ID "+Integer.toString(ID_2),Time2));
         series1.getData().add(new XYChart.Data("ID "+Integer.toString(ID_3),Time3));
 
-
         barchart.getData().addAll(series1);
 
     }
     public void GetData(){
 
-        Select_Horses_Randomly rand = new Select_Horses_Randomly();
 
         try{
-        ArrayList first = rand.SelectedHorses.get(0);
+        ArrayList first = Select_Horses_Randomly.SelectedHorses.getFirst();
         ID_1= (int) first.get(0);
         Time1= (int) first.get(8);
 
-        ArrayList second = rand.SelectedHorses.get(1);
+        ArrayList second = Select_Horses_Randomly.SelectedHorses.get(1);
         ID_2 = (int) second.get(0);
         Time2 = (int) second.get(8);
 
-        ArrayList third = rand.SelectedHorses.get(2);
+        ArrayList third = Select_Horses_Randomly.SelectedHorses.get(2);
         ID_3 = (int) third.get(0);
         Time3 = (int) third.get(8);
         }catch (IndexOutOfBoundsException e){
