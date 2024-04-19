@@ -192,8 +192,6 @@ public class Adding_Horse implements Initializable {
         catch (Exception e){
             System.out.println(e);
         }
-
-
     }
 
     private void HorseList(int ID,String Name , String Jockey, int Age ,String Breed,
@@ -259,8 +257,7 @@ public class Adding_Horse implements Initializable {
 
     }
 
-    // For J-unit changed to Protected.
-    protected void GroupCount(){
+    private void GroupCount(){
         for (ArrayList<Object> horse : WholeHorses) {
             String GROUP = (String) horse.get(6);
 

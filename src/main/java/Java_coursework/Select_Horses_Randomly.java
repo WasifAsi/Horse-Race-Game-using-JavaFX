@@ -46,6 +46,7 @@ public class Select_Horses_Randomly implements Initializable {
     @FXML
     private TableView<Selected_Horses> table;
 
+    public static ArrayList <ArrayList> SelectedHorses = new ArrayList();
 
     static String Selected_A;
     static String Selected_B;
@@ -56,8 +57,6 @@ public class Select_Horses_Randomly implements Initializable {
     Random rand = new Random();
 
 
-
-    public static ArrayList <ArrayList> SelectedHorses = new ArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -130,13 +129,14 @@ public class Select_Horses_Randomly implements Initializable {
     }
 
 
-
     public void Selected() {
 
         int A_length = Start.GroupA.size();
         int B_length = Start.GroupB.size();
         int C_length = Start.GroupC.size();
         int D_length = Start.GroupD.size();
+
+        System.out.println();
 
         int A_selected = rand.nextInt(A_length);
         int B_selected = rand.nextInt(B_length);
@@ -180,7 +180,6 @@ public class Select_Horses_Randomly implements Initializable {
         horse_GA.add(path);
 
         SelectedHorses.add(horse_GA);
-
     }
 
     public void viewGB(){

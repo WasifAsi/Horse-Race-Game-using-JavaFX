@@ -37,7 +37,7 @@ public class Game implements Initializable {
     }
 
     public void VWH(ActionEvent event) throws IOException {
-        loadFXML("View_Winning_Horse.fxml");
+        loadFXML("Visualize_Winning_Horse.fxml");
     }
 
     private void loadFXML(String fxmlFileName) throws IOException {

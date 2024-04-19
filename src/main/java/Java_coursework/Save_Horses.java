@@ -68,7 +68,7 @@ public class Save_Horses {
                 for (String horse : groupD) {
                     file.write(horse + "\n");
                 }
-                System.out.println("\nSuccessfully Saved");
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -103,7 +103,13 @@ public class Save_Horses {
                 fileD.close();
 
 
-                System.out.println("\nSuccessfully Saved");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Saved");
+                alert.setHeaderText(null);
+                alert.setContentText("Successfully Saved horse Details .");
+                alert.showAndWait();
+
+
             } catch (IOException e) {
                 e.printStackTrace();
             }

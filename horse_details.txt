@@ -1,11 +1,11 @@
 Group A
-[1, 1, 1, 1, 1, 1 Wins in 1 races, A, C:\Users\wasif\OneDrive\Pictures\Screenshots\Screenshot 2023-11-30 190310.png]
+[1, 1, 1, 1, 1, 1 Wins in 1 races, A, C:\Users\wasif\OneDrive\Desktop\Horse pic\H4.jpg]
 
 Group B
-[2, 2, 2, 2, 2, 2 Wins in 22 races, B, C:\Users\wasif\OneDrive\Pictures\Screenshots\Screenshot 2023-11-30 190310.png]
+[2, 2, 2, 2, 2, 2 Wins in 2 races, B, C:\Users\wasif\OneDrive\Desktop\Horse pic\H5.jpg]
 
 Group C
-[3, 3, 3, 3, 3, 3 Wins in 3 races, C, C:\Users\wasif\OneDrive\Pictures\Screenshots\Screenshot 2024-02-24 131144.png]
+[3, 3, 3, 3, 3, 3 Wins in 3 races, C, C:\Users\wasif\OneDrive\Desktop\Horse pic\H6.jpg]
 
 Group D
-[4, e, e, 5, 5, 5 Wins in 5 races, D, C:\Users\wasif\OneDrive\Pictures\Screenshots\Screenshot 2024-02-24 131144.png]
+[4, 4, 4, 4, 4, 4 Wins in 4 races, D, C:\Users\wasif\OneDrive\Desktop\Horse pic\pexels-wildlittlethingsphoto-1996333.jpg]

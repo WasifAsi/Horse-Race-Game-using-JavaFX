@@ -6,12 +6,13 @@ public class Validation {
 
     public static boolean AHD(String id, String name, String age, String wins, String races, String group, String breed, ArrayList<ArrayList> wholeHorses) {
 
-        //
+        //Checking for blanks
         if (id.isEmpty() || name.isEmpty() || age.isEmpty() || wins.isEmpty() || races.isEmpty() || group == null || breed.isEmpty()) {
             System.out.println("Blank fields are not allowed.");
             return false;
         }
 
+        //Validation checking
         try {
             int Id = Integer.parseInt(id);
             int Age = Integer.parseInt(age);
@@ -28,6 +29,7 @@ public class Validation {
                 return false;
             }
 
+            //Duplication checking
             for (ArrayList horse : wholeHorses) {
                 int old_Id = (int) horse.get(0);
                 if (old_Id == Id) {
@@ -47,7 +49,7 @@ public class Validation {
     public static int UHD_ID_Check(int id, ArrayList<ArrayList<Object>> wholeHorses) {
         for (int i = 0; i < wholeHorses.size(); i++) {
             ArrayList<Object> horse = wholeHorses.get(i);
-            int horseID = (int) horse.get(0);
+            int horseID = (int) horse.getFirst();
             if (horseID == id) {
                 return i;
             }
@@ -59,7 +61,7 @@ public class Validation {
         int indexToRemove = -1;
         for (int i = 0; i < wholeHorses.size(); i++) {
             ArrayList<Object> horse = wholeHorses.get(i);
-            int horseID = (int) horse.get(0);
+            int horseID = (int) horse.getFirst();
             if (horseID == id) {
                 indexToRemove = i;
                 break;
@@ -79,8 +81,8 @@ public class Validation {
                 ArrayList<Object> horse2 = wholeHorses.get(j + 1);
 
                 // Compare the first elements of the horses
-                int horse1FirstElement = (int) horse1.get(0);
-                int horse2FirstElement = (int) horse2.get(0);
+                int horse1FirstElement = (int) horse1.getFirst();
+                int horse2FirstElement = (int) horse2.getFirst();
 
                 if (horse1FirstElement > horse2FirstElement) {
                     // Swap the horses
