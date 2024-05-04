@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f65d5b5c-d3b5-4bc4-9522-c7476cb3d7be" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group A horse_details.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Group A horse_details.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group B horse_details.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Group B horse_details.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group C horse_details.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Group C horse_details.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Group D horse_details.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Group D horse_details.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/horse_details.txt" beforeDir="false" afterPath="$PROJECT_DIR$/horse_details.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/Adding_Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/Adding_Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/Save_Horses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/Save_Horses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/Select_Horses_Randomly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/Select_Horses_Randomly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/Select_Winning_Horses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/Select_Winning_Horses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/Update_Horse_Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/Update_Horse_Detail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/View_Horse_Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/View_Horse_Details.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Java_coursework/View_Winning_Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Java_coursework/Visualize_Winning_Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Java_coursework/View_Winning_Horse.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Java_coursework/Visualize_Winning_Horse.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;WasifAsi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/WasifAsi/Java-Coursework.git&quot;,
+    &quot;accountId&quot;: &quot;58ef7a02-c3a2-4112-8580-1251b09bf523&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2flh5t9YWUmk9RUgOYKlrWKUCHa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "JUnit.ValidationTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/RGU/CM 1602/Lec",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f65d5b5c-d3b5-4bc4-9522-c7476cb3d7be" name="Changes" comment="" />
+      <created>1714381391621</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714381391621</updated>
+      <workItem from="1714381392695" duration="129000" />
+      <workItem from="1714716943515" duration="986000" />
+      <workItem from="1714718426904" duration="405000" />
+      <workItem from="1714834821109" duration="225000" />
+      <workItem from="1714835163968" duration="3155000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
