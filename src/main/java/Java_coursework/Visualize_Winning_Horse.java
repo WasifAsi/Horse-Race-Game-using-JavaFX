@@ -8,9 +8,10 @@ import javafx.scene.control.Alert;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import java.util.ResourceBundle;
 
-public class View_Winning_Horse implements Initializable {
+public class Visualize_Winning_Horse implements Initializable {
     @FXML
     private BarChart<?, ?> barchart;
 
@@ -31,8 +32,6 @@ public class View_Winning_Horse implements Initializable {
 
     }
     public void GetData(){
-
-
         try{
         ArrayList first = Select_Horses_Randomly.SelectedHorses.getFirst();
         ID_1= (int) first.get(0);
@@ -52,7 +51,13 @@ public class View_Winning_Horse implements Initializable {
             alert.setContentText("At first Click Select Horses Randomly.\nThen CLick Select Winning Horses. ");
             alert.showAndWait();
 
-        }
+        }catch (NoSuchElementException e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("SHR First");
+            alert.setHeaderText(null);
+            alert.setContentText("At first Click Select Horses Randomly.\nThen CLick Select Winning Horses. ");
+            alert.showAndWait();}
+
         catch (Exception e){
             System.out.println(e);
         }

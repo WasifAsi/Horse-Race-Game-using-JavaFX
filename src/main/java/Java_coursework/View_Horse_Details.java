@@ -44,13 +44,30 @@ public class View_Horse_Details implements Initializable {
     @FXML
     private TableView<DataView> table;
 
-    private ObservableList<DataView> initialData = FXCollections.observableArrayList(); // Made it private
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        id.setCellValueFactory(new PropertyValueFactory<>("id")); // Changed PropertyValueFactory<DataView, Integer>("id") to new PropertyValueFactory<>("id")
+        name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        jockey.setCellValueFactory(new PropertyValueFactory<>("jockey"));
+        age.setCellValueFactory(new PropertyValueFactory<>("age"));
+        breed.setCellValueFactory(new PropertyValueFactory<>("breed"));
+        record.setCellValueFactory(new PropertyValueFactory<>("record"));
+        group.setCellValueFactory(new PropertyValueFactory<>("group"));
+        image.setPrefWidth(80);
+        image.setCellValueFactory(new PropertyValueFactory<>("image")); // Changed from Image to image
 
-    private Adding_Horse ahd = new Adding_Horse(); // Made it private
+
+        bubbleSortWholeHorses();
+        populateData();
+    }
+
+    private ObservableList<DataView> initialData = FXCollections.observableArrayList();
+
+
 
     @FXML
     private void populateData() {
-        for (ArrayList<Object> horse : ahd.WholeHorses) {
+        for (ArrayList<Object> horse : Adding_Horse.WholeHorses) {
             int ID = (int) horse.get(0);
             String Name = (String) horse.get(1);
             String Jockey = (String) horse.get(2);
@@ -87,41 +104,21 @@ public class View_Horse_Details implements Initializable {
 
 
     private void bubbleSortWholeHorses() {
-        for (int i = 0; i < ahd.WholeHorses.size() - 1; i++) {
-            for (int j = 0; j < ahd.WholeHorses.size() - i - 1; j++) {
-                ArrayList<Object> horse1 = ahd.WholeHorses.get(j);
-                ArrayList<Object> horse2 = ahd.WholeHorses.get(j + 1);
+        for (int i = 0; i < Adding_Horse.WholeHorses.size() - 1; i++) {
+            for (int j = 0; j < Adding_Horse.WholeHorses.size() - i - 1; j++) {
+                ArrayList<Object> horse1 = Adding_Horse.WholeHorses.get(j);
+                ArrayList<Object> horse2 = Adding_Horse.WholeHorses.get(j + 1);
 
-                // Compare the first elements of the horses
-                int horse1FirstElement = (int) horse1.get(0);
-                int horse2FirstElement = (int) horse2.get(0);
+                // Comparing  the first elements of the horses
+                int horse1FirstElement = (int) horse1.getFirst();
+                int horse2FirstElement = (int) horse2.getFirst();
 
                 if (horse1FirstElement > horse2FirstElement) {
                     // Swap the horses
-                    ahd.WholeHorses.set(j, horse2);
-                    ahd.WholeHorses.set(j + 1, horse1);
+                    Adding_Horse.WholeHorses.set(j, horse2);
+                    Adding_Horse.WholeHorses.set(j + 1, horse1);
                 }
             }
         }
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        id.setCellValueFactory(new PropertyValueFactory<>("id")); // Changed PropertyValueFactory<DataView, Integer>("id") to new PropertyValueFactory<>("id")
-        name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        jockey.setCellValueFactory(new PropertyValueFactory<>("jockey"));
-        age.setCellValueFactory(new PropertyValueFactory<>("age"));
-        breed.setCellValueFactory(new PropertyValueFactory<>("breed"));
-        record.setCellValueFactory(new PropertyValueFactory<>("record"));
-        group.setCellValueFactory(new PropertyValueFactory<>("group"));
-        image.setPrefWidth(80);
-        image.setCellValueFactory(new PropertyValueFactory<>("image")); // Changed from Image to image
-
-
-
-
-
-        bubbleSortWholeHorses();
-        populateData();
     }
 }

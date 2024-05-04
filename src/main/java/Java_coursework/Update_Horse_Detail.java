@@ -231,8 +231,6 @@ public class Update_Horse_Detail implements Initializable {
         ArrayList<Object> horseDetails = Adding_Horse.WholeHorses.get(indexToUpdate);
 
 
-
-
         horseDetails.set(1,Name);
         horseDetails.set(2,Jockey);
         horseDetails.set(3,Age);
@@ -240,9 +238,7 @@ public class Update_Horse_Detail implements Initializable {
         horseDetails.set(5,raceRecord);
         horseDetails.set(6,Group);
         horseDetails.set(7,imagePath);
-
-
-    }
+}
 
     public void onChooseImageClick(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
@@ -266,7 +262,7 @@ public class Update_Horse_Detail implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Submitted");
         alert.setHeaderText(null);
-        alert.setContentText("Successfully Added horse Details .");
+        alert.setContentText("Successfully Updated  horse Details .");
         alert.showAndWait();
 
         countA = 0;

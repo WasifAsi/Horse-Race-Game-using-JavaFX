@@ -62,6 +62,7 @@ public class Select_Winning_Horses implements Initializable {
         image.setPrefWidth(80);
         image.setCellValueFactory(new PropertyValueFactory<>("image")); // Changed from Image to image
         time.setCellValueFactory(new PropertyValueFactory<>("time"));
+
         Rand_time();
 
         bubbleSortSelectedHorses();
