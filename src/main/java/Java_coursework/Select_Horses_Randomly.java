@@ -129,13 +129,14 @@ public class Select_Horses_Randomly implements Initializable {
     }
 
 
-
     public void Selected() {
 
         int A_length = Start.GroupA.size();
         int B_length = Start.GroupB.size();
         int C_length = Start.GroupC.size();
         int D_length = Start.GroupD.size();
+
+        System.out.println();
 
         int A_selected = rand.nextInt(A_length);
         int B_selected = rand.nextInt(B_length);
